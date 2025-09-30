@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A modern, unique portfolio website built with Next.js, TypeScript, Tailwind CSS, and React Three Fiber for 3D components.
+A modern portfolio website I created built with Next.js, TypeScript, Tailwind CSS, and React Three Fiber for 3D components.
 
 ## 🚀 Features
 
