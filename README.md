@@ -34,4 +34,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **3D**: React Three Fiber + Drei + Three.js
-- **Deployment**: Vercel (recommended)
+- **Deployment**: Vercel
