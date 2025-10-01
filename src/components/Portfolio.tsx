@@ -1,45 +1,43 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface Project {
   id: number;
   title: string;
   description: string;
   tags: string[];
+  image?: string;
   link?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A stunning web application built with Next.js and React',
-    tags: ['Next.js', 'React', 'Tailwind'],
-    link: '#'
+    title: 'Idioma',
+    description: 'iOS language learning app that leverages LLMs to simplify international news articles to different CEFR proficiency levels (A2-C1), helping users read authentic content in their target language.',
+    tags: ['Swift', 'TypeScript', 'OpenAI API', 'Langchain', 'Firebase', 'Firestore', 'NewsAPI', 'Node.js'],
+    image: '/projects/idioma.png',
+    link: 'https://github.com/jpatag/Idioma-ios'
   },
   {
     id: 2,
-    title: 'Project Two',
-    description: 'An interactive 3D experience using Three.js',
-    tags: ['Three.js', 'WebGL', 'React'],
-    link: '#'
-  },
-  {
-    id: 3,
-    title: 'Project Three',
-    description: 'A full-stack application with modern architecture',
-    tags: ['TypeScript', 'Node.js', 'MongoDB'],
-    link: '#'
-  },
+    title: 'Personal Website',
+    description: 'The website you are currently viewing!',
+    tags: ['Three.js', 'React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
+    image: '/projects/website.png',
+    link: 'https://github.com/jpatag/portfolio'
+  }
+  
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="min-h-screen py-20 px-6 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-5xl font-bold mb-12 text-center">Portfolio</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="portfolio" className="min-h-screen pt-20 pb-8 px-6 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto max-w-7xl">
+        <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -48,10 +46,21 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
-                <p className="text-white font-semibold">Project Image</p>
+              <div className="relative h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg mb-6 overflow-hidden">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <p className="text-white font-semibold">Project Image</p>
+                  </div>
+                )}
               </div>
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>

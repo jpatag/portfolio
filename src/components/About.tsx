@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import AnimatedHeadshot from './AnimatedHeadshot';
 
 export default function About() {
   return (
@@ -13,29 +14,45 @@ export default function About() {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl font-bold mb-12 text-center">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                Hi! I&apos;m a passionate developer with a love for creating unique and engaging web experiences.
-                I specialize in modern web technologies and always strive to push the boundaries of what&apos;s possible.
+               I&apos;m a passionate software developer with a strong focus on Cloud, AI, and full-stack development. I enjoy exploring cutting-edge technologies and finding creative ways to leverage AI to solve real-world problems. My work often bridges the gap between scalable back-end systems and engaging front-end experiences, and I thrive on building solutions that are both impactful and innovative.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects,
-                and sharing knowledge with the developer community.
+                When I&apos;m not coding, When I&apos;m not coding, you&apos;ll usually find me at the gym, out with my camera doing photography, or picking up my guitar to unwind. I love balancing my passion for tech with creative outlets that keep me curious and energized.
               </p>
-              <div className="flex flex-wrap gap-3">
-                {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Three.js'].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl h-96 flex items-center justify-center">
-              <p className="text-white text-xl font-semibold">Your Photo Here</p>
+            <AnimatedHeadshot />
+          </div>
+          
+          {/* Skills Section */}
+          <div className="text-center">
+            <h3 className="text-3xl font-bold mb-6">Skills & Technologies</h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {[
+                'Python',
+                'TypeScript',
+                'C++',
+                'Java',
+                'Swift',
+                'Full-Stack Development',
+                'Mobile App Development',
+                'REST & gRPC APIs',
+                'Machine Learning',
+                'LLMs & AI',
+                'Cloud Infrastructure',
+                'Databases',
+                'DevOps & CI/CD',
+                'Docker & Terraform',
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </motion.div>

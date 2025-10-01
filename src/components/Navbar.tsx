@@ -8,7 +8,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 300);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -26,11 +26,20 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Portfolio
-          </a>
+          <motion.a
+            href="#"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{
+              opacity: isScrolled ? 1 : 0,
+              y: isScrolled ? 0 : -30
+            }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          >
+            Jacob Patag
+          </motion.a>
           <div className="hidden md:flex items-center gap-8">
-            {['About', 'Portfolio', 'Accomplishments', 'Contact'].map((item) => (
+            {['About', 'Accomplishments', 'Experience', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}

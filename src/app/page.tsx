@@ -1,8 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
 import Portfolio from '@/components/Portfolio';
-import Accomplishments from '@/components/Accomplishments';
 import Contact from '@/components/Contact';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -14,8 +14,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Portfolio />
-        <Accomplishments />
         <Contact />
       </main>
     </>
