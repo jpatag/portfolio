@@ -34,7 +34,7 @@ const projects: Project[] = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="min-h-screen pt-20 pb-8 px-6 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="min-h-screen pt-20 pb-8 px-6 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid md:grid-cols-2 gap-8">

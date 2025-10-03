@@ -39,7 +39,7 @@ export default function Navbar() {
             Jacob Patag
           </motion.a>
           <div className="hidden md:flex items-center gap-8">
-            {['About', 'Accomplishments', 'Experience', 'Contact'].map((item) => (
+            {['About', 'Experience', 'Projects', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}

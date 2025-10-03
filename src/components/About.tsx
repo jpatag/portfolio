@@ -20,7 +20,7 @@ export default function About() {
                I&apos;m a passionate software developer with a strong focus on Cloud, AI, and full-stack development. I enjoy exploring cutting-edge technologies and finding creative ways to leverage AI to solve real-world problems. My work often bridges the gap between scalable back-end systems and engaging front-end experiences, and I thrive on building solutions that are both impactful and innovative.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                When I&apos;m not coding, When I&apos;m not coding, you&apos;ll usually find me at the gym, out with my camera doing photography, or picking up my guitar to unwind. I love balancing my passion for tech with creative outlets that keep me curious and energized.
+                When I&apos;m not coding, you&apos;ll usually find me at the gym, out with my camera doing photography, or picking up my guitar to unwind. I love balancing my passion for tech with creative outlets that keep me curious and energized.
               </p>
             </div>
             <AnimatedHeadshot />
